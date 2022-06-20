@@ -1,0 +1,23 @@
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    font-size: 5rem;
+    text-align: center;
+    color: brown;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    letter-spacing: 8px;
+}
+
+.inputField {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 2px solid beige;
+    border-radius: 4px;
+    margin: 20px auto;
+}

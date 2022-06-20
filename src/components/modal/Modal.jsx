@@ -1,23 +1,32 @@
 import React, {Component} from "react";
 import "./Modal.css";
-// import {MapContainer, TileLayer, Marker} from "react-leaflet";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
-import icon from "leaflet/dist/images/marker-icon.png";
-import iconShadow from "leaflet/dist/images/marker-shadow.png";
-// import {Link} from "react-router-dom";
-
-let DefaultIcon = L.icon({
-  iconUrl: icon,
-  shadowUrl: iconShadow,
-});
-
-L.Marker.prototype.options.icon = DefaultIcon;
+import {Link} from "react-router-dom";
 
 class Modal extends Component {
-  state = {};
   render() {
-    return <h1>Modal</h1>;
+    return (
+      <div>
+        {this.props.isVisible && this.props.parentState.currentDoctor ? (
+          <>
+            <div className='backdrop' onClick={this.props.hide}></div>
+            <div className='modal'>
+              <p className='ModalPara'>
+                {`${this.props.parentState.currentDoctor._source.clinics[0].name}
+                 در
+                ${this.props.parentState.currentDoctor._source.clinics[0].address}
+                واقع شده است. جهت مشاهده پروفایل کامل دکتر
+                ${this.props.parentState.currentDoctor._source.fname} ${this.props.parentState.currentDoctor._source.lname}
+                بر روی دکمه زیر کلیک کنید .`}
+              </p>
+
+              <Link to={`/profile/${this.props.parentState.currentDoctor.id}`}>
+                <button className='btn'>مشاهده پروفایل</button>
+              </Link>
+            </div>
+          </>
+        ) : null}
+      </div>
+    );
   }
 }
 

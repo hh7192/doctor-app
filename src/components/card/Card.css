@@ -1,0 +1,33 @@
+.cardContainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: lemonchiffon;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.2s;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }

@@ -5,24 +5,31 @@ class Card extends Component {
   render() {
     return (
       <div className='cardContainer'>
-        {this.props.users
-          .filter((item) =>
-            item.name
-              .toLowerCase()
-              .includes(this.props.inputValue.toLowerCase())
+        {this.props.doctors
+          .filter(
+            (doctor) =>
+              doctor._source.fname.includes(this.props.inputValue) ||
+              doctor._source.lname.includes(this.props.inputValue)
           )
-          .map((item, i) => {
+          .map((doctor, i) => {
             return (
               <div
                 key={i}
                 className='card'
-                onClick={() => this.props.show(item)}>
+                onClick={() => this.props.show(doctor)}>
                 <img
                   className='avatar'
-                  src={`https://robohash.org/${item.id}?set=set2&size=200x200`}
+                  src={`https://www.tebinja.com/img/uploads/doctors/thumbnails/${doctor._source.url}`}
+                  onError={(e) => {
+                    e.currentTarget.src =
+                      "https://icon-library.com/images/doctor-icon-png/doctor-icon-png-6.jpg";
+                    e.currentTarget.style = "width : 200px; height: 200px";
+                  }}
                 />
-                <h3>{item.name}</h3>
-                <h4>{item.email}</h4>
+                <h3>
+                  {doctor._source.fname} {doctor._source.lname}
+                </h3>
+                <h4>کد نظام پزشکی: {doctor._source.pezeshkCode}</h4>
               </div>
             );
           })}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --input-border: #8b8a8b;
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+}
+
+body {
+  background: linear-gradient(90deg, rgba(255,0,14,0.20772058823529416) 0%, rgba(255,231,134,1) 69%);
+}
+
+.container {
+  margin: 2rem;
+}
+
