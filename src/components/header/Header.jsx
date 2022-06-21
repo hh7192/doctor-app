@@ -9,7 +9,7 @@ class Header extends Component {
   render() {
     return (
       <div className='headerContainer'>
-        <h1 className='header'>اپلیکیشن پزشکان</h1>
+        <h1 className='header'>اپلیکیشن جستجوی پزشکان</h1>
         <input
           type='text'
           className='inputField'

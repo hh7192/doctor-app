@@ -38,7 +38,7 @@ const Profile = () => {
   else {
     console.log(doctor);
     return (
-      <div>
+      <div className='profileContainer'>
         <aside className='profile-card'>
           <header>
             <a target='_blank'>
@@ -94,67 +94,6 @@ const Profile = () => {
           </ul>
         </aside>
       </div>
-      // <div className='profileContainer'>
-      //   <div className='profileBox'>
-      //     <div className='imgBox'>
-      //       <img
-      //         className='avatar'
-      //         src={`https://www.tebinja.com/img/uploads/doctors/thumbnails/${doctor.url}`}
-      //         onError={(e) => {
-      //           e.currentTarget.src =
-      //             "https://icon-library.com/images/doctor-icon-png/doctor-icon-png-6.jpg";
-      //           e.currentTarget.style = "width : 200px; height: 200px";
-      //         }}
-      //       />
-      //     </div>
-      //     <div className='profileContent'>
-      //       <div className='profileDetails'>
-      //         <div className='rating'>
-      //           <h4>{`امتیاز ${doctor.rate} از ${doctor.ratingCount} رای`}</h4>
-      //           <DynamicStar rating={doctor.rate} width={"30"} />
-      //         </div>
-      //         <h2>
-      //           {`دکتر ${doctor.fname} ${doctor.lname}`}
-      //           <br />
-      //           <div>{`کد نظام پزشکی: ${doctor.pezeshkCode}`}</div>
-      //         </h2>
-      //         <div className='profileData'>
-      //           <h3>
-      //             {doctor.clinics[0].name}
-      //             <br />
-      //             <span>مطب</span>
-      //           </h3>
-      //           <h3>
-      //             {`برنامه کاری: ${doctor.clinics[0].clinicsTimeSheets[0].label} ساعت
-      //           ${doctor.clinics[0].clinicsTimeSheets[0].startTime} -
-      //            ${doctor.clinics[0].clinicsTimeSheets[0].endTime}`}
-      //             <br />
-      //             <span>برنامه کاری</span>
-      //           </h3>
-      //         </div>
-      //         <div className='profileData'>
-      //           <h3>
-      //             {doctor.clinics[0].address}
-      //             <br />
-      //             <span>آدرس</span>
-      //           </h3>
-      //         </div>
-      //         <div className='profileData'>
-      //           <h3>
-      //             {doctor.clinics[0].telePhones[0].phone}
-      //             <br />
-      //             <span>تلفن</span>
-      //           </h3>
-      //           <h3>
-      //             {doctor.clinics[0].telePhones[0].phone}
-      //             <br />
-      //             <span>تلفن</span>
-      //           </h3>
-      //         </div>
-      //       </div>
-      //     </div>
-      //   </div>
-      // </div>
     );
   }
 };

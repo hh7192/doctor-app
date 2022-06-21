@@ -1,153 +1,8 @@
-/* .profileContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
- }
- 
- .profileBox {
-     position: relative;
-     width: 550px;
-     height: 600px;
-     background-color: #fff;
-     border-radius: 20px;
-     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
-     transition: all 0.5s;
- }
- 
- .profileBox:hover {
-     background-color: lightcyan;
- }
- 
- .imgBox {
-     position: absolute;
-     left: 50%;
-     top: -50px;
-     transform: translateX(-50%);
-     width: 150px;
-     height: 150px;
-     background: #fff;
-     border-radius: 20px;
-     box-shadow: 0 5px 50px rgba(0, 0, 0, 0.35);
-     overflow: hidden;
-     transition: all 0.5s;
- }
- 
- .profileBox:hover .imgBox {
-    width: 200px;
-    height: 200px;
-     background-color: lemonchiffon;
-     transform: translateX(-290px);
- }
- 
- .profileBox:hover .profileContent .profileDetails h2{
-     font-size: 2.3rem;
-     text-align: end;
-     line-height: 2.4rem;
-     color: brown;
- }
- 
- .profileBox:hover .profileContent .profileDetails h2 div {
- font-size: 1rem;
- }
- 
- .imgBox img {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
- }
- 
- .profileBox .profileContent {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     display: flex;
-     justify-content: center;
-     align-items: flex-end;
- }
- 
- .profileBox .profileContent .profileDetails {
-     text-align: center;
-     width: 100%;
-     transition: all 0.5s steps(100);
-     margin: 12px;
- }
- 
- 
- .profileBox .profileContent .profileDetails h2 {
- font-size: 1.25rem;
- font-weight: 600;
- color: #555;
- line-height: 1.2rem;
- transition: all 0.1s steps(100);
- }
- 
- .profileBox .profileContent .profileDetails h2 div {
-     font-size: 0.75rem;
-     font-weight: 500;
-     opacity: 0.7;
-     transition: all 0.1s steps(100);
-     margin-top: 20px;
- }
- 
- .profileBox .profileContent .profileDetails .profileData {
-     display: flex;
-     justify-content: space-between;
-     margin: 30px 0;
- }
- 
- .profileBox .profileContent .profileDetails .profileData h3 {
-     font-size: 1rem;
-     color: #555;
-     line-height: 1.2rem;
-     font-weight: 600;
- }
- 
- 
- .profileBox .profileContent .profileDetails .profileData h3 span {
-     font-size: 0.85rem;
-     font-weight: 400;
-     opacity: 0.7;
- }
- 
- 
- @media screen and (max-width: 600px) {
-     .profileBox:hover .imgBox {
-         transform: translate(-100px, -100px);
-     }
- 
-     .profileBox {
-         height: 500px;
-     }
- 
-     .profileBox:hover .profileContent .profileDetails h2 {
-         text-align: center;
-     }
- }
-
- .profileBox .profileContent .profileDetails .rating {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-  margin: -60px;
-
- }
-
- .profileBox .profileContent .profileDetails .rating h4 {
-    color: #888;
-    margin-bottom: 20px;
- }
- */
-
  html {
     height: 100%;
   }
   
-  body {
+  .profileContainer {
     overflow: hidden;
     background:
     linear-gradient(to bottom right, #c8cad6 15%, transparent),
@@ -163,7 +18,7 @@
     -webkit-font-smoothing: antialiased;
   }
   
-  body:before {
+  .profileContainer:before {
     content: "";
     height: 0px;
     padding: 0px;
@@ -233,7 +88,7 @@
     width: 179px;
     height: 280px;
     padding: 40px 20px 30px 20px;
-    display: inline-block;
+    display: block;
     float: left;
     border-right: 2px dashed #EEEEEE;
     background: #FFFFFF;
