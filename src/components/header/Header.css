@@ -5,10 +5,8 @@
 .header {
     font-size: 5rem;
     text-align: center;
-    color: brown;
-    font-family: 'Roboto', sans-serif;
+    color: bisque;
     font-weight: 900;
-    letter-spacing: 8px;
 }
 
 .inputField {

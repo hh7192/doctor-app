@@ -18,20 +18,19 @@ class HomePage extends Component {
   }
 
   componentDidMount = () => {
-    fetch("https://www.tebinja.com/api/v1/doctors/searchi?page=1")
+    fetch("https://www.tebinja.com/api/v1/doctors/searchi?page=0")
       .then((response) => response.json())
       .then((data) => {
         this.setState({
           isLoad: true,
-          doctors: data.doctors.hits,
+          doctors: data.doctors.hits.map((doctor) => doctor._source),
         });
-        console.log(data.doctors.hits);
-        console.log(this.state.doctors);
+        // console.log(this.state.doctors);
       });
   };
 
-  showModal = (user) => {
-    this.setState({isModalVisible: true, currentDoctor: user});
+  showModal = (doctor) => {
+    this.setState({isModalVisible: true, currentDoctor: doctor});
   };
 
   hideModal = () => {

@@ -11,11 +11,11 @@ class Modal extends Component {
             <div className='backdrop' onClick={this.props.hide}></div>
             <div className='modal'>
               <p className='ModalPara'>
-                {`${this.props.parentState.currentDoctor._source.clinics[0].name}
+                {`${this.props.parentState.currentDoctor.clinics[0].name}
                  در
-                ${this.props.parentState.currentDoctor._source.clinics[0].address}
+                ${this.props.parentState.currentDoctor.clinics[0].address}
                 واقع شده است. جهت مشاهده پروفایل کامل دکتر
-                ${this.props.parentState.currentDoctor._source.fname} ${this.props.parentState.currentDoctor._source.lname}
+                ${this.props.parentState.currentDoctor.fname} ${this.props.parentState.currentDoctor.lname}
                 بر روی دکمه زیر کلیک کنید .`}
               </p>
 

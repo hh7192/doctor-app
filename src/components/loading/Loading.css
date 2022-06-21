@@ -1,0 +1,29 @@
+.loadingContainer {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #343434;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingContainer h1 {
+    font-size: 100px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 20px;
+    background: url('../../images/notfound.png') center repeat;
+    background-size:200px;
+    -webkit-text-fill-color: transparent;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+}
+
+@media screen and (max-width: 500px) {
+    .loadingContainer h1 {
+        font-size: 70px;
+        letter-spacing: 3px;
+    }
+}

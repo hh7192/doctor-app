@@ -9,11 +9,11 @@ class Header extends Component {
   render() {
     return (
       <div className='headerContainer'>
-        <h1 className='header'>Doctors</h1>
+        <h1 className='header'>اپلیکیشن پزشکان</h1>
         <input
           type='text'
           className='inputField'
-          placeholder='SEARCH...'
+          placeholder='جستجو ...'
           onChange={(e) => this.props.update({inputValue: e.target.value})}
         />
       </div>

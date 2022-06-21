@@ -1,0 +1,45 @@
+.notFoundContainer {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #343434;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notFoundContainer h1 {
+    font-size: 260px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 20px;
+    background: url('../../images/notfound.png') center repeat;
+    background-size:200px;
+    -webkit-text-fill-color: transparent;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+}
+
+.notFoundContainer a {
+    text-decoration: none;
+    background-color: pink;
+    color: #fff;
+    padding: 12px;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    margin-top: 20px;
+}
+
+.notFoundContainer a:hover {
+    background-color: #e55039;
+}
+
+@media screen and (max-width: 600px) {
+    .notFoundContainer h1 {
+        font-size: 160px;
+    }
+}

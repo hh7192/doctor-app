@@ -8,8 +8,8 @@ class Card extends Component {
         {this.props.doctors
           .filter(
             (doctor) =>
-              doctor._source.fname.includes(this.props.inputValue) ||
-              doctor._source.lname.includes(this.props.inputValue)
+              doctor.fname.includes(this.props.inputValue) ||
+              doctor.lname.includes(this.props.inputValue)
           )
           .map((doctor, i) => {
             return (
@@ -19,7 +19,7 @@ class Card extends Component {
                 onClick={() => this.props.show(doctor)}>
                 <img
                   className='avatar'
-                  src={`https://www.tebinja.com/img/uploads/doctors/thumbnails/${doctor._source.url}`}
+                  src={`https://www.tebinja.com/img/uploads/doctors/thumbnails/${doctor.url}`}
                   onError={(e) => {
                     e.currentTarget.src =
                       "https://icon-library.com/images/doctor-icon-png/doctor-icon-png-6.jpg";
@@ -27,9 +27,9 @@ class Card extends Component {
                   }}
                 />
                 <h3>
-                  {doctor._source.fname} {doctor._source.lname}
+                  {doctor.fname} {doctor.lname}
                 </h3>
-                <h4>کد نظام پزشکی: {doctor._source.pezeshkCode}</h4>
+                <h4>کد نظام پزشکی: {doctor.pezeshkCode}</h4>
               </div>
             );
           })}

@@ -5,10 +5,10 @@ class NotFound extends Component {
   render() {
     return (
       <div className='notFoundContainer'>
-        <h2>Oops! Profile not found.</h2>
+        <h2>پروفایل پزشک پیدا نشد!</h2>
         <h1>404</h1>
-        <p>We can't find the Doctor you are looking for.</p>
-        <a href='/'>Go back home</a>
+        <p>ما موفق به پیدا کردن صفحه پروفایل پزشک مورد نظر شما نشدیم.</p>
+        <a href='/'>صفحه اصلی</a>
       </div>
     );
   }

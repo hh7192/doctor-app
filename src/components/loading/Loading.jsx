@@ -7,7 +7,7 @@ class Loading extends Component {
     return (
       <div className='loadingContainer'>
         <h1>LOADING !</h1>
-        <p>The page is loading, Please Wait ...</p>
+        <p>صفحه در حال بارگزاری است. لطفا صبر کنید ...</p>
       </div>
     );
   }

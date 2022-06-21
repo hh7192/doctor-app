@@ -1,27 +1,44 @@
 .cardContainer {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: auto auto auto;
+    margin-top: 40px;
+    position: relative;
+    perspective: 100rem;
+    display: grid;
+    transform-style: preserve-3d;
     
   }
+
+.cardContainer:hover > div,
+.cardContainer:hover:before {
+  transform: none;
+}
+.cardContainer > div,
+.cardContainer:before {
+  will-change: transform;
+  transition: .3s transform cubic-bezier(.25,.46,.45,1);
+}
+
   
   .card {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 300px;
+    width: 400px;
+    transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+    background: rgba(26, 156, 249, 0.88);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
-    border: 1px solid black;
-    margin: 20px;
-    border-radius: 1rem;
+    padding: 30px;
+    color: darkblue;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 900;
+    backface-visibility: hidden;
+    box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
     cursor: pointer;
-    background-color: lemonchiffon;
-    padding: 20px;
-    width: 300px;
-    transition: all 0.2s;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 1px;
+    border-radius: 1rem 0 8rem 0;
   }
   
   .avatar {
@@ -30,4 +47,5 @@
   
   .card:hover {
     transform: scale(1.1);
+    background: rgba(17, 102, 162, 0.88);
   }
