@@ -9,7 +9,7 @@ class Modal extends Component {
         {this.props.isVisible && this.props.parentState.currentDoctor ? (
           <>
             <div className='backdrop' onClick={this.props.hide}></div>
-            <div className='modal'>
+            <div className='modalBox'>
               <p className='ModalPara'>
                 {`${this.props.parentState.currentDoctor.clinics[0].name}
                  در
@@ -20,7 +20,7 @@ class Modal extends Component {
               </p>
 
               <Link to={`/profile/${this.props.parentState.currentDoctor.id}`}>
-                <button className='btn'>مشاهده پروفایل</button>
+                <button className='readMoreBtn'>مشاهده پروفایل</button>
               </Link>
             </div>
           </>

@@ -15,7 +15,7 @@ class Card extends Component {
             return (
               <div
                 key={i}
-                className='card'
+                className='cardBox'
                 onClick={() => this.props.show(doctor)}>
                 <img
                   className='avatar'

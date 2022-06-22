@@ -34,7 +34,7 @@ const Profile = () => {
         <Loading />
       </div>
     );
-  else if (!hasFound) return <NotFound />;
+  else if (!hasFound) return "<NotFound />";
   else {
     console.log(doctor);
     return (
@@ -55,13 +55,13 @@ const Profile = () => {
 
             <div className='rating'>
               <DynamicStar rating={doctor.rate} width={"30"} height={"30"} />
-              <h4>{`امتیاز ${doctor.rate} از ${doctor.ratingCount} رای`}</h4>
+              <h4 className='h4'>{`امتیاز ${doctor.rate} از ${doctor.ratingCount} رای`}</h4>
             </div>
-            <h1>{`دکتر ${doctor.fname} ${doctor.lname}`}</h1>
-            <h2>{doctor.spUnis[0].specialty.name}</h2>
-            <h2>{doctor.clinics[0].name}</h2>
-            <h5>{`کد نظام پزشکی: ${doctor.pezeshkCode}`}</h5>
-            <h5>{`دانشگاه: ${doctor.university.name}`}</h5>
+            <h1 className='h1'>{`دکتر ${doctor.fname} ${doctor.lname}`}</h1>
+            <h3 className='h3'>{doctor.spUnis[0].specialty.name}</h3>
+            <h3 className='h3'>{doctor.clinics[0].name}</h3>
+            <h5 className='h5'>{`کد نظام پزشکی: ${doctor.pezeshkCode}`}</h5>
+            <h5 className='h5'>{`دانشگاه: ${doctor.university.name}`}</h5>
           </header>
 
           <div className='profile-bio'>

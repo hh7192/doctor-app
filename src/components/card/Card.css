@@ -19,7 +19,7 @@
 }
 
   
-  .card {
+  .cardBox {
     margin-top: 30px;
     margin-bottom: 30px;
     height: 300px;
@@ -45,7 +45,7 @@
     border-radius: 50%;
   }
   
-  .card:hover {
+  .cardBox:hover {
     transform: scale(1.1);
     background: rgba(17, 102, 162, 0.88);
   }
