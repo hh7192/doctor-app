@@ -55,39 +55,64 @@ const Profile = () => {
 
             <div className='rating'>
               <DynamicStar rating={doctor.rate} width={"30"} height={"30"} />
-              <h4 className='h4'>{`امتیاز ${doctor.rate} از ${doctor.ratingCount} رای`}</h4>
+              <h4 className='h4'>{doctor.rate && doctor.ratingCount ? `امتیاز ${doctor.rate} از ${doctor.ratingCount} رای` : ''}</h4>
             </div>
             <h1 className='h1'>{`دکتر ${doctor.fname} ${doctor.lname}`}</h1>
-            <h3 className='h3'>{doctor.spUnis[0].specialty.name}</h3>
-            <h3 className='h3'>{doctor.clinics[0].name}</h3>
+            <h3 className='h3'>
+              {
+                doctor.spUnis[0] && doctor.spUnis[0].specialty && doctor.spUnis[0].specialty.name
+                  ?
+                  doctor.spUnis[0].specialty.name
+                  :
+                  ''
+              }
+              {/* {doctor.spUnis[0].specialty && doctor.spUnis[0].specialty.name == null ? "" : doctor.spUnis[0].specialty.name} */}
+            </h3>
+            {
+              Array.isArray(doctor.clinics) && doctor.clinics.map(item => {
+                return (
+                  <div className='profile-bio'>
+                    <h3>
+                      {item.name}
+                    </h3>
+                    <p>{`آدرس: ${item.address}`}</p> <br />
+                    <p>{`تلفن: ${item.telePhones[0].phone}`}</p>
+                    <p>{`ویزیت: ${item.clinicsTimeSheets[0] && item.clinicsTimeSheets[0].label ? item.clinicsTimeSheets[0].label : ''}`}</p>
+                    <p>{`${item.clinicsTimeSheets[0] && item.clinicsTimeSheets[0].startTime ? item.clinicsTimeSheets[0].startTime : ''} - ${item.clinicsTimeSheets[0] && item.clinicsTimeSheets[0].endTime ? item.clinicsTimeSheets[0].endTime : ''}`}</p>
+                  </div>
+
+                )
+              })
+            }
+            {/* <h3 className='h3'>
+              {
+
+              }
+              {doctor.clinics[0].name}
+            </h3> */}
             <h5 className='h5'>{`کد نظام پزشکی: ${doctor.pezeshkCode}`}</h5>
-            <h5 className='h5'>{`دانشگاه: ${doctor.university.name}`}</h5>
+            <h5 className='h5'>{`دانشگاه: ${doctor.university && doctor.university.name ? doctor.university.name : ''}`}</h5>
           </header>
 
-          <div className='profile-bio'>
-            <p>{`آدرس: ${doctor.clinics[0].address}`}</p> <br />
-            <p>{`تلفن: ${doctor.clinics[0].telePhones[0].phone}`}</p>
-            <p>{`ویزیت: ${doctor.clinics[0].clinicsTimeSheets[0].label}`}</p>
-            <p>{`${doctor.clinics[0].clinicsTimeSheets[0].startTime} - ${doctor.clinics[0].clinicsTimeSheets[0].endTime}`}</p>
-          </div>
+
 
           <ul className='profile-social-links'>
             <li>
               <a
                 target='_blank'
-                href={`https://www.instagram.com/${doctor.clinics[0].instagram}`}>
+                href={`https://www.instagram.com/${doctor.clinics[0].instagram && doctor.clinics[0] ? doctor.clinics[0].instagram : ''}`}>
                 <i className='uil uil-instagram-alt'></i>
               </a>
             </li>
             <li>
               <a
                 target='_blank'
-                href={`https://t.me/${doctor.clinics[0].telegram}`}>
+                href={`https://t.me/${doctor.clinics[0].telegram ? doctor.clinics[0].telegram : ''}`}>
                 <i className='uil uil-telegram-alt'></i>
               </a>
             </li>
             <li>
-              <a target='_blank' href={`${doctor.clinics[0].webSite}`}>
+              <a target='_blank' href={`${doctor.clinics[0].webSite ? doctor.clinics[0].webSite : ''}`}>
                 <i className='uil uil-window'></i>
               </a>
             </li>
